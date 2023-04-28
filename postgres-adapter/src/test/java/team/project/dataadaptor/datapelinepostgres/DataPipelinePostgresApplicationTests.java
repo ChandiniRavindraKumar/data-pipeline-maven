@@ -1,4 +1,4 @@
-package com.example.DataPipelinePostgres;
+package team.project.dataadaptor.datapelinepostgres;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;

@@ -1,4 +1,4 @@
-package com.example.DataPipelinePostgres;
+package team.project.dataadaptor.datapelinepostgres;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
