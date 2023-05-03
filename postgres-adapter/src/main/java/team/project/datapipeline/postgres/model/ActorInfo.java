@@ -1,19 +1,21 @@
 package team.project.datapipeline.postgres.model;
 
 import java.io.Serializable;
-import javax.persistence.*;
+import jakarta.persistence.*;
 
 
 /**
  * The persistent class for the actor_info database table.
  * 
  */
-@Entity
-@Table(name="actor_info")
-@NamedQuery(name="ActorInfo.findAll", query="SELECT a FROM ActorInfo a")
+//@Entity
+//@Table(name="actor_info")
+//@NamedQuery(name="ActorInfo.findAll", query="SELECT a FROM ActorInfo a")
 public class ActorInfo implements Serializable {
 	private static final long serialVersionUID = 1L;
 
+	@Id
+	@GeneratedValue(strategy=GenerationType.AUTO)
 	@Column(name="actor_id")
 	private Integer actorId;
 

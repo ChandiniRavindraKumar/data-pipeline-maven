@@ -1,7 +1,7 @@
 package team.project.datapipeline.postgres.model;
 
 import java.io.Serializable;
-import javax.persistence.*;
+import jakarta.persistence.*;
 import java.math.BigDecimal;
 
 
@@ -9,9 +9,9 @@ import java.math.BigDecimal;
  * The persistent class for the film_list database table.
  * 
  */
-@Entity
-@Table(name="film_list")
-@NamedQuery(name="FilmList.findAll", query="SELECT f FROM FilmList f")
+//@Entity
+//@Table(name="film_list")
+//@NamedQuery(name="FilmList.findAll", query="SELECT f FROM FilmList f")
 public class FilmList implements Serializable {
 	private static final long serialVersionUID = 1L;
 

@@ -1,16 +1,16 @@
 package team.project.datapipeline.postgres.model;
 
 import java.io.Serializable;
-import javax.persistence.*;
+import jakarta.persistence.*;
 
 
 /**
  * The persistent class for the staff_list database table.
  * 
  */
-@Entity
-@Table(name="staff_list")
-@NamedQuery(name="StaffList.findAll", query="SELECT s FROM StaffList s")
+//@Entity
+//@Table(name="staff_list")
+//@NamedQuery(name="StaffList.findAll", query="SELECT s FROM StaffList s")
 public class StaffList implements Serializable {
 	private static final long serialVersionUID = 1L;
 

@@ -1,7 +1,7 @@
 package team.project.datapipeline.postgres.model;
 
 import java.io.Serializable;
-import javax.persistence.*;
+import jakarta.persistence.*;
 import java.math.BigDecimal;
 
 
@@ -9,9 +9,9 @@ import java.math.BigDecimal;
  * The persistent class for the nicer_but_slower_film_list database table.
  * 
  */
-@Entity
-@Table(name="nicer_but_slower_film_list")
-@NamedQuery(name="NicerButSlowerFilmList.findAll", query="SELECT n FROM NicerButSlowerFilmList n")
+//@Entity
+//@Table(name="nicer_but_slower_film_list")
+//@NamedQuery(name="NicerButSlowerFilmList.findAll", query="SELECT n FROM NicerButSlowerFilmList n")
 public class NicerButSlowerFilmList implements Serializable {
 	private static final long serialVersionUID = 1L;
 

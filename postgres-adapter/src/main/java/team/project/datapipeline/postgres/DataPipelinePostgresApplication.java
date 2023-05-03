@@ -1,18 +1,17 @@
-package team.project.datapeline.postgres;
+package team.project.datapipeline.postgres;
 
 import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import team.project.datapipeline.postgres.model.Actor;
-import team.project.datapipeline.postgres.repository.ActorRepository;
+import org.springframework.context.annotation.ComponentScan;
+import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 
-import java.util.List;
-import java.util.Optional;
-
+@EnableJpaRepositories
 @SpringBootApplication
 public class DataPipelinePostgresApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(team.project.datapeline.postgres.DataPipelinePostgresApplication.class, args);
+		SpringApplication.run(DataPipelinePostgresApplication.class, args);
 
 		}
 

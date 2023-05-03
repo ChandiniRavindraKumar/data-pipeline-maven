@@ -1,7 +1,9 @@
 package team.project.datapipeline.postgres.model;
 
 import java.io.Serializable;
-import javax.persistence.*;
+
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import jakarta.persistence.*;
 import java.sql.Timestamp;
 import java.util.List;
 
@@ -32,6 +34,7 @@ public class Actor implements Serializable {
 
 	//bi-directional many-to-one association to FilmActor
 	@OneToMany(mappedBy="actor")
+	 @JsonIgnore
 	private List<FilmActor> filmActors;
 
 	public Actor() {

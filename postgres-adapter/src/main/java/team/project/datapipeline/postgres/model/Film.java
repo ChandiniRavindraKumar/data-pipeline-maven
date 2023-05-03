@@ -1,10 +1,9 @@
 package team.project.datapipeline.postgres.model;
 
 import java.io.Serializable;
-import javax.persistence.*;
+import jakarta.persistence.*;
 import java.math.BigDecimal;
 import java.sql.Timestamp;
-import java.sql.Array;
 import java.util.List;
 
 
@@ -50,7 +49,7 @@ public class Film implements Serializable {
 	private BigDecimal replacementCost;
 
 	@Column(name="special_features", length=2147483647)
-	private Array specialFeatures;
+	private List<String> specialFeatures;
 
 	@Column(nullable=false, length=255)
 	private String title;
@@ -155,11 +154,11 @@ public class Film implements Serializable {
 		this.replacementCost = replacementCost;
 	}
 
-	public Array getSpecialFeatures() {
+	public List<String> getSpecialFeatures() {
 		return this.specialFeatures;
 	}
 
-	public void setSpecialFeatures(Array specialFeatures) {
+	public void setSpecialFeatures(List<String> specialFeatures) {
 		this.specialFeatures = specialFeatures;
 	}
 
