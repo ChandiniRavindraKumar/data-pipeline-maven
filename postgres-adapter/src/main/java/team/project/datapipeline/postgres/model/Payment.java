@@ -1,6 +1,8 @@
 package team.project.datapipeline.postgres.model;
 
 import java.io.Serializable;
+
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import java.math.BigDecimal;
 import java.sql.Timestamp;
@@ -29,16 +31,19 @@ public class Payment implements Serializable {
 
 	//bi-directional many-to-one association to Customer
 	@ManyToOne
+	@JsonIgnore
 	@JoinColumn(name="customer_id", nullable=false)
 	private Customer customer;
 
 	//bi-directional many-to-one association to Rental
 	@ManyToOne
+	@JsonIgnore
 	@JoinColumn(name="rental_id", nullable=false)
 	private Rental rental;
 
 	//bi-directional many-to-one association to Staff
 	@ManyToOne
+	@JsonIgnore
 	@JoinColumn(name="staff_id", nullable=false)
 	private Staff staff;
 

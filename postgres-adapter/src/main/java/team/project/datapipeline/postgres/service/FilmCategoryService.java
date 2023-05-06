@@ -11,5 +11,4 @@ public interface FilmCategoryService {
     FilmCategory create(FilmCategory filmCategory);
     Optional<FilmCategory> find(Integer filmCategoryId);
 
-    FilmCategory update(FilmCategory filmCategory) throws Exception;
 }

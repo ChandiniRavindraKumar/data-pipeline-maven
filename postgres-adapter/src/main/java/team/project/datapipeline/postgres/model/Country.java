@@ -1,6 +1,8 @@
 package team.project.datapipeline.postgres.model;
 
 import java.io.Serializable;
+
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import java.sql.Timestamp;
 import java.util.List;
@@ -29,6 +31,7 @@ public class Country implements Serializable {
 
 	//bi-directional many-to-one association to City
 	@OneToMany(mappedBy="country")
+	@JsonIgnore
 	private List<City> cities;
 
 	public Country() {

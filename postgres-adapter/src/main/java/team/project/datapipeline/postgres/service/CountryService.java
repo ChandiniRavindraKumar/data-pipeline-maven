@@ -14,5 +14,4 @@ public interface CountryService {
 
     Optional<Country> find(Integer countryId);
 
-    Country update(Country country) throws Exception;
 }

@@ -14,5 +14,4 @@ public interface CityService {
 
     Optional<City> find(Integer cityId);
 
-    City update(City city) throws Exception;
 }

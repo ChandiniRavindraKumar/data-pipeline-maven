@@ -12,7 +12,6 @@ public interface FilmActorService {
     Iterable<FilmActor> findAll();
 
     FilmActor create(FilmActor filmActor);
-    Optional<FilmActor> find(Integer filmActorId);
+    Optional<FilmActor> find(Integer filmId);
 
-    FilmActor update(FilmActor filmActor) throws Exception;
 }

@@ -14,5 +14,4 @@ public interface CategoryService {
     Category create(Category category);
     Optional<Category> find(Integer categoryId);
 
-    Category update(Category category) throws Exception;
 }

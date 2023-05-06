@@ -13,5 +13,4 @@ public interface StoreService {
     Store create(Store store);
     Optional<Store> find(Integer storeId);
 
-    Store update(Store store) throws Exception;
 }

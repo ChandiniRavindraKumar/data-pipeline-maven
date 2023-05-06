@@ -14,5 +14,4 @@ public interface InventoryService {
 
     Optional<Inventory> find(Integer inventoryId);
 
-    Inventory update(Inventory inventory) throws Exception;
 }

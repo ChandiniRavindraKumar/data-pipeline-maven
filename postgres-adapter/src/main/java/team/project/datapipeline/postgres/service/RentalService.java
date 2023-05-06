@@ -13,5 +13,4 @@ public interface RentalService {
     Rental create(Rental rental);
     Optional<Rental> find(Integer rentalId);
 
-    Rental update(Rental rental) throws Exception;
 }

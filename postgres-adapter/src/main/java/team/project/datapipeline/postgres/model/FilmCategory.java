@@ -1,6 +1,8 @@
 package team.project.datapipeline.postgres.model;
 
 import java.io.Serializable;
+
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import java.sql.Timestamp;
 
@@ -23,11 +25,13 @@ public class FilmCategory implements Serializable {
 
 	//bi-directional many-to-one association to Category
 	@ManyToOne
+	@JsonIgnore
 	@JoinColumn(name="category_id", nullable=false, insertable=false, updatable=false)
 	private Category category;
 
 	//bi-directional many-to-one association to Film
 	@ManyToOne
+	@JsonIgnore
 	@JoinColumn(name="film_id", nullable=false, insertable=false, updatable=false)
 	private Film film;
 

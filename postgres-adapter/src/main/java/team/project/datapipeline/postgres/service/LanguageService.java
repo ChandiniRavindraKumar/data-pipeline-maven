@@ -13,5 +13,4 @@ public interface LanguageService {
     Language create(Language language);
     Optional<Language> find(Integer languageId);
 
-    Language update(Language language) throws Exception;
 }
