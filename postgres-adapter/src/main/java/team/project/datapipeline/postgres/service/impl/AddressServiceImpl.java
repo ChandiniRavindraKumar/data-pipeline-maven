@@ -3,8 +3,11 @@ package team.project.datapipeline.postgres.service.impl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import team.project.datapipeline.postgres.model.Address;
+import team.project.datapipeline.postgres.model.Film;
 import team.project.datapipeline.postgres.repository.AddressRepository;
+import team.project.datapipeline.postgres.repository.FilmRepository;
 import team.project.datapipeline.postgres.service.AddressService;
+import team.project.datapipeline.postgres.service.FilmService;
 
 import java.util.Objects;
 import java.util.Optional;
@@ -19,6 +22,7 @@ class AddressServiceImpl implements AddressService {
     public Iterable<Address> findAll() {
         return addressRepository.findAll();
     }
+
     @Override
     public Address create(Address address) {
         return addressRepository.save(address);
@@ -43,13 +47,11 @@ class AddressServiceImpl implements AddressService {
         if (existingAddressOpt.isPresent()) {
             Address existingAddress = existingAddressOpt.get();
 
-            Address staticPhone = new Address();
-
-            if (!staticPhone.getPhone().equals(existingAddress.getPhone())) {
-                existingAddress.setPhone(staticPhone.getPhone());
+            if (!address.getPhone().equals(existingAddress.getPhone())) {
+                existingAddress.setPhone(address.getPhone());
             }
-            updatedAddress = addressRepository.save(existingAddress
-            );
+
+            updatedAddress = addressRepository.save(existingAddress);
         } else {
             throw new Exception("Address is not found in the database");
         }

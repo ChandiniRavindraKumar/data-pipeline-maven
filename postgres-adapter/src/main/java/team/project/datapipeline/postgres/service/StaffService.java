@@ -4,9 +4,7 @@ import team.project.datapipeline.postgres.model.Staff;
 
 import java.util.Optional;
 
-
 public interface StaffService {
-
 
     Iterable<Staff> findAll();
 
@@ -14,4 +12,8 @@ public interface StaffService {
     Optional<Staff> find(Integer staffId);
 
     Staff update(Staff staff) throws Exception;
+
+
+
+
 }

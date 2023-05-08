@@ -2,8 +2,6 @@ package team.project.datapipeline.postgres.service.impl;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import team.project.datapipeline.postgres.model.Customer;
-import team.project.datapipeline.postgres.model.Film;
 import team.project.datapipeline.postgres.model.Payment;
 import team.project.datapipeline.postgres.repository.PaymentRepository;
 import team.project.datapipeline.postgres.service.PaymentService;
@@ -52,7 +50,7 @@ class PaymentServiceImpl implements PaymentService {
 
             updatedPayment = paymentRepository.save(existingPayment);
         } else {
-            throw new Exception("Film is not found in the database");
+            throw new Exception("Payment is not found in the database");
         }
 
         return updatedPayment;
