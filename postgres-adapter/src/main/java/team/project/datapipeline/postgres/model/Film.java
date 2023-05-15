@@ -28,7 +28,7 @@ public class Film implements Serializable {
 	private String description;
 
 	@Column(nullable=false)
-	private Object fulltext;
+	private String fulltext;
 
 	@Column(name="last_update", nullable=false)
 	private Timestamp lastUpdate;
@@ -39,16 +39,16 @@ public class Film implements Serializable {
 	private String rating;
 
 	@Column(name="release_year")
-	private Object releaseYear;
+	private Integer releaseYear;
 
 	@Column(name="rental_duration", nullable=false)
 	private Integer rentalDuration;
 
 	@Column(name="rental_rate", nullable=false, precision=4, scale=2)
-	private BigDecimal rentalRate;
+	private Double rentalRate;
 
 	@Column(name="replacement_cost", nullable=false, precision=5, scale=2)
-	private BigDecimal replacementCost;
+	private Double replacementCost;
 
 	@Column(name="special_features", length=2147483647)
 	private List<String> specialFeatures;
@@ -96,11 +96,11 @@ public class Film implements Serializable {
 		this.description = description;
 	}
 
-	public Object getFulltext() {
+	public String getFulltext() {
 		return this.fulltext;
 	}
 
-	public void setFulltext(Object fulltext) {
+	public void setFulltext(String fulltext) {
 		this.fulltext = fulltext;
 	}
 
@@ -128,11 +128,11 @@ public class Film implements Serializable {
 		this.rating = rating;
 	}
 
-	public Object getReleaseYear() {
+	public Integer getReleaseYear() {
 		return this.releaseYear;
 	}
 
-	public void setReleaseYear(Object releaseYear) {
+	public void setReleaseYear(Integer releaseYear) {
 		this.releaseYear = releaseYear;
 	}
 
@@ -144,19 +144,19 @@ public class Film implements Serializable {
 		this.rentalDuration = rentalDuration;
 	}
 
-	public BigDecimal getRentalRate() {
+	public Double getRentalRate() {
 		return this.rentalRate;
 	}
 
-	public void setRentalRate(BigDecimal rentalRate) {
+	public void setRentalRate(Double rentalRate) {
 		this.rentalRate = rentalRate;
 	}
 
-	public BigDecimal getReplacementCost() {
+	public Double getReplacementCost() {
 		return this.replacementCost;
 	}
 
-	public void setReplacementCost(BigDecimal replacementCost) {
+	public void setReplacementCost(Double replacementCost) {
 		this.replacementCost = replacementCost;
 	}
 

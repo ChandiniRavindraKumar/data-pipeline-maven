@@ -1,11 +1,13 @@
 package team.project.datapipeline.postgres.service;
 
+import team.project.datapipeline.postgres.model.Actor;
 import team.project.datapipeline.postgres.model.Film;
-import team.project.datapipeline.postgres.model.FilmCategory;
 
 import java.util.Optional;
 
 public interface FilmService {
+
+    final Actor actor = null;
 
 
     Iterable<Film> findAll();
@@ -15,4 +17,5 @@ public interface FilmService {
     Optional<Film> find(Integer filmId);
 
     Film update(Film film) throws Exception;
+
 }

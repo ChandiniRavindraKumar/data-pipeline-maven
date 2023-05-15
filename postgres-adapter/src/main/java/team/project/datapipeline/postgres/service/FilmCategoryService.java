@@ -1,3 +1,5 @@
+package team.project.datapipeline.postgres.service;
+
 import team.project.datapipeline.postgres.model.FilmCategory;
 
 import java.util.Optional;

@@ -34,7 +34,7 @@ public class Actor implements Serializable {
 
 	//bi-directional many-to-one association to FilmActor
 	@OneToMany(mappedBy="actor")
-	 @JsonIgnore
+	//@JsonIgnore
 	private List<FilmActor> filmActors;
 
 	public Actor() {

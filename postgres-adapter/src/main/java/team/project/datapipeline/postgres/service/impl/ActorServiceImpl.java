@@ -6,6 +6,7 @@ import team.project.datapipeline.postgres.model.Actor;
 import team.project.datapipeline.postgres.repository.ActorRepository;
 import team.project.datapipeline.postgres.service.ActorService;
 
+import java.util.List;
 import java.util.Map;
 import java.util.Objects;
 import java.util.Optional;
@@ -18,8 +19,8 @@ class ActorServiceImpl implements ActorService {
     private ActorRepository actorRepository;
 
     @Override
-    public Iterable<Actor> findAll() {
-        return actorRepository.findAll();
+    public List<Actor> findAll() {
+        return (List<Actor>) actorRepository.findAll();
     }
     @Override
     public Actor create(Actor actor) {

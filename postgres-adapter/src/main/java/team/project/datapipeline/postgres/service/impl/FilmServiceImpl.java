@@ -2,7 +2,9 @@ package team.project.datapipeline.postgres.service.impl;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import team.project.datapipeline.postgres.model.Actor;
 import team.project.datapipeline.postgres.model.Film;
+import team.project.datapipeline.postgres.model.FilmActorPK;
 import team.project.datapipeline.postgres.repository.FilmRepository;
 import team.project.datapipeline.postgres.service.FilmService;
 

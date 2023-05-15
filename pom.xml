@@ -21,9 +21,17 @@
 	<modules>
 		<module>cassandra-adapter</module>
 		<module>postgres-adapter</module>
+		<module>mongo-adapter</module>
 	</modules>
+    <dependencies>
+        <dependency>
+            <groupId>com.oguzbabaoglu</groupId>
+            <artifactId>auto-value-querymap</artifactId>
+            <version>1.0</version>
+        </dependency>
+    </dependencies>
 
-	<build>
+    <build>
 		<plugins>
 			<plugin>
 				<groupId>org.springframework.boot</groupId>

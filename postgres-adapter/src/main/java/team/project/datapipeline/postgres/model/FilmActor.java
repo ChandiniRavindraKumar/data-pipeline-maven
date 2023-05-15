@@ -31,7 +31,7 @@ public class FilmActor implements Serializable {
 
 	//bi-directional many-to-one association to Film
 	@ManyToOne
-	@JsonIgnore
+	//JsonIgnore
 	@JoinColumn(name="film_id", nullable=false, insertable=false, updatable=false)
 	private Film film;
 

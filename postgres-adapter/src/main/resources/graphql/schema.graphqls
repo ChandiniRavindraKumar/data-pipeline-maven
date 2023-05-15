@@ -1,0 +1,33 @@
+type Query {
+    actorById(id:ID) : Actor
+    findActors: [Actor]
+    }
+
+type Actor {
+    actorId: ID
+    firstName: String
+    lastName: String
+    filmActors: [FilmActor]
+    }
+
+type FilmActor {
+    film: Film
+}
+
+type Film {
+    filmId: ID
+    description: String
+    fulltext: String
+    length: Int
+    rating: String
+    releaseYear: Int
+    rentalDuration: Int
+    rentalRate: Float
+    replacementCost: Float
+    title: String
+
+}
+
+
+
+
